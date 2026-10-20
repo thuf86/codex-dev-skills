@@ -14,7 +14,7 @@
 
 ---
 
-## ⭐ Apoie o projeto
+## ⭐ Apoie o projeto deixe uma ⭐
 
 Se este repositório for útil ao seu ambiente de desenvolvimento, considere deixar uma estrela. Compartilhe melhorias por meio de issues e pull requests.
 
