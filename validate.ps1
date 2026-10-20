@@ -1,0 +1,4 @@
+$ErrorActionPreference='Stop'
+$expected=@('frontend-uiux','android-apk','backend-apis','database-engineering','quality-security','context-token-efficiency')
+foreach($name in $expected){$path=Join-Path $PSScriptRoot "skills/$name/SKILL.md";if(!(Test-Path $path)){throw "Missing $path"};$text=Get-Content -Raw -LiteralPath $path;$pattern='(?s)^---\s*\r?\nname:\s*'+[regex]::Escape($name)+'\s*\r?\ndescription:.+?\r?\n---';if($text -notmatch $pattern){throw "Invalid frontmatter: $name"};foreach($heading in @('## Activation','## Workflow','## Guardrails','## Deliverable')){if(!$text.Contains($heading)){throw "Missing $heading in $name"}};Write-Host "PASS $name"}
+Write-Host 'PASS: structural validation only; functional validation requires Codex and toolchains.'
