@@ -1,6 +1,6 @@
 # Codex Dev Skills
 
-Six task-activated custom skills for Codex on Windows/VS Code: frontend UI/UX, Android/APK, backend APIs, databases, quality/security, and context/token efficiency.
+Eleven task-activated custom skills for Codex on Windows/VS Code: frontend UI/UX, Android/APK, backend APIs, databases, quality/security, and context/token efficiency.
 
 ## Install globally for all projects (Windows PowerShell)
 
@@ -51,14 +51,27 @@ Get-ChildItem "$HOME\.agents\skills" -Directory | Select-Object Name
 
 ## Coverage versus previously suggested skills
 
-This repository includes **six original custom skills**, not all third-party or official skills previously discussed. `playwright`, `playwright-interactive`, `openai-docs`, `screenshot`, and `create-plan` are not bundled here. `skill-creator` and `skill-installer` are built-in system skills in supported Codex versions; do not copy or overwrite them. Install optional official/community skills separately after reviewing their sources and compatibility.
+This repository includes **eleven original custom skills**, not all third-party or official skills previously discussed. Custom equivalents for browser testing, interactive browser debugging, OpenAI API documentation, screenshot review and implementation planning are included. `skill-creator` and `skill-installer` are built-in system skills in supported Codex versions; do not copy or overwrite them. For official variants, use the supported Codex skill installer separately after reviewing their sources and compatibility.
 
 ## Activation and validation
 
 Each skill has YAML `name` and `description` metadata. Codex discovers skills and loads detailed instructions when relevant. Mention a skill explicitly to request it. The `AGENTS.example.md` file is a template, not automatically installed as global instructions.
 
-`validate.ps1` checks the six skill files and expected sections; GitHub Actions runs the structural check on pushes and pull requests. Structural checks are not a substitute for an actual Codex discovery test or Android/web build.
+`validate.ps1` checks the eleven skill files and expected sections; GitHub Actions runs the structural check on pushes and pull requests. Structural checks are not a substitute for an actual Codex discovery test or Android/web build.
 
 ## Safety
 
 Do not commit API keys, passwords, tokens or signing credentials. Preserve existing project functionality unless a change is explicitly authorized and tested.
+
+
+## Additional custom skills
+
+| Skill | Purpose |
+| --- | --- |
+| `playwright-browser` | Playwright E2E tests |
+| `playwright-interactive-browser` | Interactive browser debugging when supported |
+| `openai-api-docs` | Official OpenAI API reference workflow |
+| `screenshot-review` | Screenshot and visual UI inspection |
+| `implementation-plan` | Phased implementation planning |
+
+See [system skills](docs/system-skills.md) for Skill Creator and Skill Installer guidance. These are not duplicated or overridden.
