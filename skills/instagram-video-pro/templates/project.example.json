@@ -1,0 +1,42 @@
+{
+  "title": "NULL TRACE — exemplo educativo",
+  "canvas": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30
+  },
+  "brand": {
+    "background": "#050708",
+    "accent": "#00FF9C",
+    "text": "#FFFFFF",
+    "footer": "@null.tracee · nulltrace.online"
+  },
+  "slides": [
+    {
+      "title": "SEUS DADOS IMPORTAM",
+      "body": "Reconheça sinais de mensagens suspeitas antes de clicar.",
+      "seconds": 4
+    },
+    {
+      "title": "VERIFIQUE O REMETENTE",
+      "body": "Confirme o domínio e desconfie de pedidos urgentes.",
+      "seconds": 6
+    },
+    {
+      "title": "NÃO USE LINKS RECEBIDOS",
+      "body": "Acesse o serviço pelo aplicativo ou endereço oficial.",
+      "seconds": 6
+    },
+    {
+      "title": "ATIVE A PROTEÇÃO",
+      "body": "Use autenticação em duas etapas quando disponível.",
+      "seconds": 6
+    },
+    {
+      "title": "COMPARTILHE A DICA",
+      "body": "Mais segurança digital começa com informação.",
+      "seconds": 4
+    }
+  ],
+  "caption": "Desconfie de mensagens urgentes e confirme a origem antes de clicar. #SegurancaDigital #Conscientizacao"
+}

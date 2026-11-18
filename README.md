@@ -22,7 +22,7 @@ Se este repositório for útil ao seu ambiente de desenvolvimento, considere dei
 
 ## 🤖 Codex Dev Skills
 
-O **Codex Dev Skills** reúne **11 skills personalizadas** para OpenAI Codex e Claude Code, organizadas em um único repositório. O objetivo é padronizar tarefas de frontend, Android, backend, bancos de dados, testes, segurança e planejamento, com **ativação sob demanda** e boas práticas de economia de contexto.
+O **Codex Dev Skills** reúne **12 skills personalizadas** para OpenAI Codex e Claude Code, organizadas em um único repositório. O objetivo é padronizar tarefas de frontend, Android, backend, bancos de dados, testes, segurança e planejamento, com **ativação sob demanda** e boas práticas de economia de contexto.
 
 **Autor:** [thuf86](https://github.com/thuf86)
 
@@ -34,7 +34,7 @@ Este projeto oferece:
 
 - Instalação global para o usuário Windows, válida em diferentes projetos.
 - Compatibilidade com **Codex** e **Claude Code**, com diretórios separados.
-- Instalação individual ou conjunta das 11 skills.
+- Instalação individual ou conjunta das 12 skills.
 - Atualizações seguras com backup das skills anteriores.
 - Metadados `SKILL.md` e instruções de ativação por contexto.
 - Validação estrutural via PowerShell e GitHub Actions.
@@ -59,6 +59,7 @@ Este projeto oferece:
 | `openai-api-docs` | Consulta à documentação oficial de APIs OpenAI |
 | `screenshot-review` | Análise de capturas e regressão visual |
 | `implementation-plan` | Planejamento em fases e critérios de aceitação |
+| `instagram-video-pro` | Roteiro, direção criativa, renderização FFmpeg e QA de Reels/Stories em pt-BR |
 
 `skill-creator` e `skill-installer` são skills de sistema em instalações compatíveis do Codex; veja [a documentação](docs/system-skills.md). Não são sobrescritas.
 
@@ -133,7 +134,7 @@ Use [AGENTS.example.md](AGENTS.example.md) como modelo de instruções do Codex.
 .\validate.ps1
 ```
 
-O validador verifica a presença e a estrutura das 11 skills. O workflow do GitHub Actions executa essa verificação no Windows. A publicação do workflow **não comprova** que a execução remota passou ou que os agentes reconheceram as skills.
+O validador verifica a presença e a estrutura das 12 skills. O workflow do GitHub Actions executa essa verificação no Windows. A publicação do workflow **não comprova** que a execução remota passou ou que os agentes reconheceram as skills.
 
 ---
 
@@ -147,7 +148,7 @@ Nunca inclua chaves de API, senhas, tokens ou credenciais de assinatura no repos
 
 ```text
 codex-dev-skills/
-├── skills/                  # 11 skills com SKILL.md
+├── skills/                  # 12 skills com SKILL.md
 ├── docs/                    # Orientações de compatibilidade
 ├── .github/workflows/       # Validação automatizada
 ├── install.ps1              # Instalador Codex / Claude / Ambos
@@ -156,3 +157,14 @@ codex-dev-skills/
 ├── CLAUDE.example.md        # Instruções para Claude Code
 └── README.md
 ```
+
+
+## 🎬 Instagram Video Pro
+
+Nova skill `instagram-video-pro` com **pipeline local reproduzível** de vídeos gráficos 1080×1920, identidade visual configurável (incluindo NULL TRACE), scripts Python para renderização FFmpeg/FFprobe, 4 testes unitários e documentação. A produção de vídeo generativo e TTS depende de integrações externas autorizadas; não estão embutidos na skill. Reels são independentes do padrão de carrossel de 7 imagens.
+
+```powershell
+.\install.ps1 -Target Both -Scope Global -Only instagram-video-pro
+```
+
+Veja [documentação da skill](skills/instagram-video-pro/README.md).
